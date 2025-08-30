@@ -1,0 +1,397 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+    overflow-x: hidden;
+}
+/* header start */
+header{
+    width: 100%;
+    margin: auto;
+    background-color: #fcfceac4;
+    position: fixed;
+}
+.header-content h2{
+    font-size: 30px;
+    color: red;
+}
+.header-content{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+.header-content nav ul{
+    display: flex;
+}
+.header-content nav ul a {
+    margin: 0 5px ;
+    color: rgb(0, 0, 0);
+    position: relative;
+    transition: .5s;
+    padding: 10px;
+    font-size: 15px;
+}
+.header-content nav ul a:hover{
+    background-color: rgba(0, 0, 0, 0.129);
+    border-radius: 10px;
+}
+.header-content nav ul a::after{
+    content: "";
+    width: 0;
+    left: 0;
+    height: 3px;
+    border-radius: 10px;
+    bottom: -8px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    transition: .5s;
+}
+.header-content nav ul a:hover::after{
+    width: 100%;
+}
+/* header end */
+/* home start */
+.home{
+    background: linear-gradient(#fcfcea74),url(./img/back.jpeg);
+}
+.home-con{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.home-con .logo{
+    width: 40%;
+}
+.home-con .logo img{
+    width: 100%;
+    transform: .5s;
+    animation: img 3s forwards;
+    transform: translateX(80px);
+    opacity: 0;
+}
+@keyframes img{
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.home-con .text{
+    width: 50%;
+    margin:70px 0;
+}
+.home-con .text h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    animation: span 3s forwards;
+    opacity: 0;
+    transform: translateY(-40px);
+}
+.home-con .text h2 span{
+    color: red;
+    font-size: 50px;
+}
+@keyframes span{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.home-con a{
+    padding: 20px;
+    background-color: red;
+    border-radius: 20px;
+    color: #000000;
+    font-weight: 900;
+    transition: .5s;
+}
+.home-con a:hover{
+    background-color: transparent;
+    border: solid red 5px;
+    box-shadow: 0 0 10px 10px red;
+}
+/* home end */
+
+/* about start */
+.about{
+    background-color: rgba(180, 205, 200, 0.956);
+}
+.about-con{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    width: 90%;
+    margin: auto;
+    justify-items: center;
+    padding: 6rem 0;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+}
+.about-con .text , .about-con .about-logo img{
+    width: 100%;
+}
+.about-con .text h2{
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    font-size: 20px;
+}
+.about-con .text h2 span{
+    color: red;
+    font-size: 40px;
+}
+.about-con .text p{
+    margin-bottom: 3rem;
+}
+.about-con .text a{
+    padding: 15px;
+    background-color: red;
+    border-radius: 20px;
+    color: #000000;
+    font-weight: 900;
+    transition: .5s;
+}
+.about-con a:hover{
+    background-color: transparent;
+    border: solid red 5px;
+    box-shadow: 0 0 10px 10px red;
+}
+/* about end */
+
+/* offer start */
+.offer{
+    background-image: url(./img/offer-background.jpg);
+    background-size: cover;
+}
+.offer-con{
+    display: grid;
+    place-items: center;
+    padding: 6rem 0;
+    color: white;
+}
+.offer-card{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 30px;
+    margin: 0 20px;
+    margin-top: 4rem;
+    text-align: center;
+}
+.offer-card img{
+    width: 80%;
+    margin-bottom: 20px;
+}
+.offer-con .titel{
+    text-align: center;
+}
+.offer-con .titel h2{
+    color: red;
+    font-size: 40px;
+}
+.offer-card h2{
+    margin-bottom: 10px;
+}
+.offer-card p{
+    color: red;
+}
+/* offer end */
+
+/* menu start */
+.menu{
+    background-color: rgb(194, 121, 121);
+}
+.menu-con{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    place-items: center;
+}
+.menu-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+    margin: 3rem 0 6rem 0;
+    width: 100%;
+}
+.menu-card img{
+    width: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+
+}
+.menu-card .card{
+    display: flex;
+}
+.menu-con .titel{
+    margin-top: 3rem;
+    font-size: 20px;
+    color: red;
+    text-transform: uppercase;
+}
+/* menu end */
+/* contact start */
+.contact{
+    background-color: rgb(213, 213, 213);
+}
+.contact-con{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    padding: 3rem 0 6rem 0;
+}
+.main-contact-con {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    justify-items: center;
+    align-items: center;
+}
+.contact-con .titel{
+    color: red;
+    font-size: 40px;
+    margin-bottom: 3rem;
+}
+.main-contact-con .form{
+    background-color: black;
+    padding: 30px;
+    border-radius: 20px;
+    transition: .5s;
+    display: grid;
+
+}
+.main-contact-con .form:hover{
+    box-shadow: 0 0 12px 12px rgb(255, 3, 3);
+}
+.main-contact-con .form input ,.textarea{
+margin: 15px;
+padding: 10px;
+border-radius: 15px;
+}
+.contact-logo img , .contact-logo .contact-logo{
+    width: 90%;
+    margin-bottom: 20px;
+}
+.form .bottom{
+    text-align: center;
+}
+.submit , .reset{
+    color: black;
+    background-color: red;
+    border: red;
+    transition: .5s;
+}
+.reset:hover , .submit:hover{
+    background-color: transparent;
+    border: red 4px solid;
+    color: white;
+
+}
+.form input:not(.submit,.reset),.textarea {
+    background-color: rgb(175, 175, 171);
+}
+.textarea::placeholder , 
+.form input::placeholder{
+    color: rgba(0, 0, 0, 0.546);
+    font-weight: 700;
+}
+
+.form input:focus{
+    background-color: rgb(255, 255, 255);
+}
+/* contact end */
+footer{
+    background-color: black;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+.footer-con{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,minmax(300px,1fr)
+    );
+    justify-items: center;
+}
+footer h4{
+    color: red;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.footer-links a{
+    color: white;
+    transition: .5s;
+}
+.footer-links a:hover{
+    color: red;
+}
+.footer-social ul{
+    display: flex;
+}
+.footer-social ul i{
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    transition: .5s;
+}
+.footer-social ul i:hover{
+    transform: translateY(-10px);
+    color: red;
+}
+@media (max-width:700px){
+    .home .text h2 span{
+        text-align: center;
+        font-size: 30px;
+    }
+    .home .text{
+        width: 100%;
+    }
+}
+@media (max-width:550px){
+    html{
+    scroll-padding-top: 110px;
+    }
+    .header-content{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+}
+@media (max-width:430px){
+    .header-content h2{
+        font-size: 25px;
+    }
+    .header-content nav ul a{
+        font-size: 13px;
+    }
+    .header-content nav ul{
+        width: 100%;
+    }
+    .header-content{
+        padding: 20px;
+    }
+    .offer-con{
+        width: 80%;
+        margin: auto;
+    }
+}
